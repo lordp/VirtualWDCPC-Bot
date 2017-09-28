@@ -1,0 +1,24 @@
+# Round {round} - {race} in DRY conditions
+
+This competition is open to **anybody**. You do not have to be in a current league with us. Simply post a comment with the links to your screenshots and have fun trying to be the fastest driver on VirtualWDC.
+
+
+##Rules and Regs
+
+Rules and regulations can be found in [our wiki](http://www.reddit.com/r/VirtualWDCPC/wiki/timetrial)
+
+##Example Submission
+
+Simply post the round and your time with a link to the screenshot (for verification):
+
+    {race}: [1:23.456](http://link.to/screenshot)
+
+And if you improve your time you can cross out the previous time and add the new, improved time:
+
+    {race}: ~~[1:23.456](http://link.to/screenshot)~~ [1:11.111](http://link.to/better-screenshot)
+
+### Scoring
+
+Points will be awarded to the top 10 quickest times using the current Formula 1 scoring system. These points are applicable only to each round, and is simply for bragging rights. Get some laps in and have fun!
+
+# Happy Lapping!

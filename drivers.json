@@ -1,0 +1,352 @@
+[
+  {
+    "name": "bobthedealer",
+    "leagues": {
+      "1400": "toro-rosso2017",
+      "1700": "sauber"
+    },
+    "country": "portugal"
+  },
+  {
+    "name": "Amagi822",
+    "leagues": {
+      "1400": "mclaren2017"
+    },
+    "country": "dutch"
+  },
+  {
+    "name": "Lord_Iggy",
+    "leagues": {
+      "2100": "renault"
+    },
+    "country": "canada"
+  },
+  {
+    "name": "gokitr",
+    "leagues": {
+      "2100": "mclaren2017"
+    },
+    "country": "us"
+  },
+  {
+    "name": "Karyuuu",
+    "leagues": {
+      "1400": "sauber"
+    },
+    "country": "argentina"
+  },
+  {
+    "name": "Spectre2689",
+    "leagues": {
+      "1400": "williams"
+    },
+    "country": "canada"
+  },
+  {
+    "name": "iabmob",
+    "leagues": {
+      "1400": "renault"
+    },
+    "country": "us"
+  },
+  {
+    "name": "Cant_Frag",
+    "leagues": {
+      "2100": "ferrari"
+    },
+    "country": "us"
+  },
+  {
+    "name": "twinHD",
+    "leagues": {
+      "1400": "rbr"
+    },
+    "country": "germany"
+  },
+  {
+    "name": "Rti22",
+    "leagues": {
+      "1400": "rbr"
+    },
+    "country": "dutch"
+  },
+  {
+    "name": "Kirb-",
+    "leagues": {
+      "2100": "williams"
+    },
+    "country": "us"
+  },
+  {
+    "name": "TheDeityRyan",
+    "leagues": {
+      "2100": "haas",
+      "1700": "haas"
+    },
+    "country": "us"
+  },
+  {
+    "name": "vinster57",
+    "leagues": {
+      "2100": "rbr"
+    },
+    "country": "us"
+  },
+  {
+    "name": "AceStudios10",
+    "leagues": {
+      "2100": "force-india",
+      "1700": "force-india"
+    },
+    "country": "us"
+  },
+  {
+    "name": "Izaaco",
+    "leagues": {
+      "2100": "mercedes",
+      "1700": "rbr"
+    },
+    "country": "dutch"
+  },
+  {
+    "name": "BestPepeEU",
+    "leagues": {
+      "1400": "ferrari",
+      "1700": "toro-rosso2017"
+    },
+    "country": "germany"
+  },
+  {
+    "name": "silenthatch",
+    "leagues": {
+      "2100": "haas"
+    },
+    "country": "us"
+  },
+  {
+    "name": "CaptainKoala",
+    "leagues": {
+      "2100": "mercedes",
+      "1400": "haas"
+    },
+    "country": "us"
+  },
+  {
+    "name": "c0mpliant",
+    "leagues": {
+      "2100": "ferrari"
+    },
+    "country": "eire"
+  },
+  {
+    "name": "NightmareV",
+    "leagues": {
+      "1700": "mclaren2017"
+    },
+    "country": "australia"
+  },
+  {
+    "name": "RingoFreakingStarr",
+    "leagues": {
+      "1400": "williams"
+    },
+    "country": "us"
+  },
+  {
+    "name": "AlimOncul",
+    "leagues": {
+      "1400": "force-india"
+    },
+    "country": "turkey"
+  },
+  {
+    "name": "-suka",
+    "leagues": {
+      "1400": "toro-rosso2017"
+    },
+    "country": "portugal"
+  },
+  {
+    "name": "xD-Revelations",
+    "leagues": {
+      "1700": "ferrari"
+    },
+    "country": "uk"
+  },
+  {
+    "name": "FlashX2009",
+    "leagues": {
+      "1700": "haas"
+    },
+    "country": "us"
+  },
+  {
+    "name": "KermitTheFish",
+    "leagues": {
+      "2100": "renault"
+    },
+    "country": "uk"
+  },
+  {
+    "name": "APimpNamed-Slickback",
+    "leagues": {
+      "1400": "sauber"
+    },
+    "country": "us"
+  },
+  {
+    "name": "Xerack",
+    "leagues": {
+      "1400": "force-india"
+    },
+    "country": "us"
+  },
+  {
+    "name": "PredSpread",
+    "leagues": {
+      "2100": "mclaren2017"
+    },
+    "country": "uk"
+  },
+  {
+    "name": "MrHyperion_",
+    "leagues": {
+      "1700": "mercedes"
+    },
+    "country": "finland"
+  },
+  {
+    "name": "Foxmuldz",
+    "leagues": {
+      "1700": "rbr"
+    },
+    "country": "australia"
+  },
+  {
+    "name": "jookaton",
+    "leagues": {
+      "1400": "renault"
+    },
+    "country": "canada"
+  },
+  {
+    "name": "DakineKing",
+    "leagues": {
+      "1700": "mclaren2017"
+    },
+    "country": "switzerland"
+  },
+  {
+    "name": "ianstorm101",
+    "leagues": {
+      "1400": "ferrari"
+    },
+    "country": "canada"
+  },
+  {
+    "name": "I_am_LordHarrington",
+    "leagues": {
+      "2100": "sauber",
+      "1700": "force-india"
+    },
+    "country": "uk"
+  },
+  {
+    "name": "CrankyAdolf",
+    "leagues": {
+      "1400": "haas"
+    },
+    "country": "us"
+  },
+  {
+    "name": "C4HeliBomber",
+    "leagues": {
+      "1700": "ferrari"
+    },
+    "country": "germany"
+  },
+  {
+    "name": "Tyresm0ke",
+    "leagues": {
+      "2100": "force-india"
+    },
+    "country": "uk"
+  },
+  {
+    "name": "GeneralLustboy",
+    "leagues": {
+      "1400": "mercedes"
+    },
+    "country": "malaysia"
+  },
+  {
+    "name": "Banaboy",
+    "leagues": {
+      "2100": "toro-rosso2017"
+    },
+    "country": "uk"
+  },
+  {
+    "name": "sanwitch",
+    "leagues": {
+      "1400": "mercedes"
+    },
+    "country": "australia"
+  },
+  {
+    "name": "DamagedJustice",
+    "leagues": {
+      "1700": "renault"
+    },
+    "country": "canada"
+  },
+  {
+    "name": "andiousandy",
+    "leagues": {
+      "1400": "mclaren2017"
+    },
+    "country": "uk"
+  },
+  {
+    "name": "AssEffect3",
+    "leagues": {
+      "2100": "rbr"
+    },
+    "country": "us"
+  },
+  {
+    "name": "chrisdunnbirch",
+    "leagues": {
+      "2100": "williams"
+    },
+    "country": "uk"
+  },
+  {
+    "name": "nizmugen",
+    "leagues": {
+      "1700": "sauber"
+    },
+    "country": "us"
+  },
+  {
+    "name": "weas95",
+    "leagues": {
+      "2100": "sauber"
+    },
+    "country": "belgium"
+  },
+  {
+    "name": "Krusen",
+    "leagues": {
+      "1700": "toro-rosso2017"
+    },
+    "country": "denmark"
+  },
+  {
+    "name": "figgot",
+    "leagues": {
+      "1700": "mercedes"
+    },
+    "country": "us"
+  }
+]

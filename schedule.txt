@@ -1,0 +1,16 @@
+date|race|round
+2017-09-16|Italy|1
+2017-09-30|Malaysia|2
+2017-10-07|Japan|3
+2017-10-21|USA|4
+2017-10-28|Mexico|5
+2017-11-11|Brazil|6
+2017-11-25|Abu Dhabi|7
+2017-12-02|Singapore|8
+2017-12-16|Australia|9
+2018-01-06|China|10
+2018-01-13|Bahrain|11
+2018-01-27|Monaco|12
+2018-02-03|Canada|13
+2018-02-17|Austria|14
+2018-03-03|Spain|15
