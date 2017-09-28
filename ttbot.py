@@ -108,7 +108,7 @@ class TTBot:
 
     def process_time_trial_threads(self, threads):
         # Load the drivers from the league text files into array
-        self.load_driver_leagues()
+        self.load_drivers()
 
         for thread in threads:
             # Wet and dry times tables need building
@@ -211,7 +211,7 @@ class TTBot:
 
             return replytext
 
-    def load_driver_leagues(self):
+    def load_drivers(self):
         with open('drivers.json', 'r') as f:
             self.drivers = json.load(f)
 
