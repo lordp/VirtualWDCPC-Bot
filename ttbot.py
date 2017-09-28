@@ -360,13 +360,20 @@ class TTBot:
         leaders = self.google.get_leaders()
         leader_text = {}
         for league in leaders:
-            leader_text[league] = template.format(
-                league=league,
-                team='mclaren2017',
-                country="uk",
-                driver=leaders[league]['driver'][0],
-                points=utils.format_float(leaders[league]['driver'][1])
-            )
+            try:
+                driver_name = leaders[league]['driver'][0]
+                driver_points = leaders[league]['driver'][1]
+                driver = next((item for item in self.drivers if item["name"] == driver_name), False)
+
+                leader_text[league] = template.format(
+                    league=league,
+                    team=driver['leagues'][league],
+                    country=driver['country'],
+                    driver=driver_name,
+                    points=utils.format_float(driver_points)
+                )
+            except TypeError:
+                leader_text[league] = ''
 
         with open('sidebar.txt') as f:
             sidebar_body = f.read().format(
@@ -375,13 +382,7 @@ class TTBot:
                 league_2100=leader_text['2100'],
             )
 
-        # update = self.client.subreddit(self.subreddit).mod.update(description=sidebar_body)
-        # print(update)
-
-        # try:
-        #     sub.upload_header('C:\\Users\\darrylh\\Pictures\\sunset-cropped.jpg')
-        # except TooLarge:
-        #     print('Too large!')
+        self.client.subreddit(self.subreddit).mod.update(description=sidebar_body)
 
 
 # End of class, start program
