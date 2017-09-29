@@ -1,6 +1,7 @@
 [
   {
     "name": "bobbo",
+    "alias": "bobthedealer",
     "leagues": {
       "1400": "toro-rosso2017",
       "1700": "sauber"
@@ -9,6 +10,7 @@
   },
   {
     "name": "Majestic",
+    "alias": "Amagi822",
     "leagues": {
       "1400": "mclaren2017"
     },
@@ -16,6 +18,7 @@
   },
   {
     "name": "Lord_Iggy (KaYoS)",
+    "alias": "Lord_Iggy",
     "leagues": {
       "2100": "renault"
     },
@@ -23,6 +26,7 @@
   },
   {
     "name": "goki",
+    "alias": "gokitr",
     "leagues": {
       "2100": "mclaren2017"
     },
@@ -30,6 +34,7 @@
   },
   {
     "name": "Karyuu",
+    "alias": "Karyuuu",
     "leagues": {
       "1400": "sauber"
     },
@@ -37,6 +42,7 @@
   },
   {
     "name": "Spectre",
+    "alias": "Spectre2689",
     "leagues": {
       "1400": "williams"
     },
@@ -44,6 +50,7 @@
   },
   {
     "name": "iabmob",
+    "alias": null,
     "leagues": {
       "1400": "renault"
     },
@@ -51,13 +58,15 @@
   },
   {
     "name": "Cant_Frag",
+    "alias": null,
     "leagues": {
       "2100": "ferrari"
     },
     "country": "us"
   },
   {
-    "name": "twinHD",
+    "name": "twinHD (Rekor)",
+    "alias": "twinHD",
     "leagues": {
       "1400": "rbr"
     },
@@ -65,6 +74,7 @@
   },
   {
     "name": "Rti22 (Roemer)",
+    "alias": "Rti22",
     "leagues": {
       "1400": "rbr"
     },
@@ -72,6 +82,7 @@
   },
   {
     "name": "Kirb",
+    "alias": "Kirb-",
     "leagues": {
       "2100": "williams"
     },
@@ -79,6 +90,7 @@
   },
   {
     "name": "Deity",
+    "alias": "TheDeityRyan",
     "leagues": {
       "2100": "haas",
       "1700": "haas"
@@ -87,6 +99,7 @@
   },
   {
     "name": "ItsJustVinny",
+    "alias": "vinster57",
     "leagues": {
       "2100": "rbr"
     },
@@ -94,6 +107,7 @@
   },
   {
     "name": "AceStudios10",
+    "alias": null,
     "leagues": {
       "2100": "force-india",
       "1700": "force-india"
@@ -102,6 +116,7 @@
   },
   {
     "name": "Izaaco",
+    "alias": null,
     "leagues": {
       "2100": "mercedes",
       "1700": "rbr"
@@ -110,6 +125,7 @@
   },
   {
     "name": "Pepe",
+    "alias": "BestPepeEU",
     "leagues": {
       "1400": "ferrari",
       "1700": "toro-rosso2017"
@@ -118,6 +134,7 @@
   },
   {
     "name": "SilentHatch",
+    "alias": "silenthatch",
     "leagues": {
       "2100": "haas"
     },
@@ -125,6 +142,7 @@
   },
   {
     "name": "Slavic Donut",
+    "alias": "CaptainKoala",
     "leagues": {
       "2100": "mercedes",
       "1400": "haas"
@@ -133,6 +151,7 @@
   },
   {
     "name": "c0mpliant",
+    "alias": null,
     "leagues": {
       "2100": "ferrari"
     },
@@ -140,6 +159,7 @@
   },
   {
     "name": "NightmareV",
+    "alias": null,
     "leagues": {
       "1700": "mclaren2017"
     },
@@ -147,6 +167,7 @@
   },
   {
     "name": "RingoStarr",
+    "alias": "RingoFreakingStarr",
     "leagues": {
       "1400": "williams"
     },
@@ -154,6 +175,7 @@
   },
   {
     "name": "AlimOncul",
+    "alias": null,
     "leagues": {
       "1400": "force-india"
     },
@@ -161,6 +183,7 @@
   },
   {
     "name": "SUKA",
+    "alias": "-suka",
     "leagues": {
       "1400": "toro-rosso2017"
     },
@@ -168,6 +191,7 @@
   },
   {
     "name": "xD-Revelations",
+    "alias": null,
     "leagues": {
       "1700": "ferrari"
     },
@@ -175,6 +199,7 @@
   },
   {
     "name": "FlashX2009",
+    "alias": null,
     "leagues": {
       "1700": "haas"
     },
@@ -182,6 +207,7 @@
   },
   {
     "name": "KermitTheFish",
+    "alias": null,
     "leagues": {
       "2100": "renault"
     },
@@ -189,6 +215,7 @@
   },
   {
     "name": "APimpNamed-Slickback",
+    "alias": null,
     "leagues": {
       "1400": "sauber"
     },
@@ -196,6 +223,7 @@
   },
   {
     "name": "Xerack",
+    "alias": null,
     "leagues": {
       "1400": "force-india"
     },
@@ -203,6 +231,7 @@
   },
   {
     "name": "PredSpread",
+    "alias": null,
     "leagues": {
       "2100": "mclaren2017"
     },
@@ -210,6 +239,7 @@
   },
   {
     "name": "Hyperion",
+    "alias": "MrHyperion_",
     "leagues": {
       "1700": "mercedes"
     },
@@ -217,6 +247,7 @@
   },
   {
     "name": "foxmuldz",
+    "alias": "Foxmuldz",
     "leagues": {
       "1700": "rbr"
     },
@@ -224,6 +255,7 @@
   },
   {
     "name": "Jookaton",
+    "alias": "jookaton",
     "leagues": {
       "1400": "renault"
     },
@@ -231,6 +263,7 @@
   },
   {
     "name": "DakineKing (Finmir)",
+    "alias": "DakineKing",
     "leagues": {
       "1700": "mclaren2017"
     },
@@ -238,6 +271,7 @@
   },
   {
     "name": "ianstorm",
+    "alias": "ianstorm101",
     "leagues": {
       "1400": "ferrari"
     },
@@ -245,6 +279,7 @@
   },
   {
     "name": "LordHarrington",
+    "alias": "I_am_LordHarrington",
     "leagues": {
       "2100": "sauber",
       "1700": "force-india"
@@ -253,6 +288,7 @@
   },
   {
     "name": "Sup My Kneegrows",
+    "alias": "CrankyAdolf",
     "leagues": {
       "1400": "haas"
     },
@@ -260,6 +296,7 @@
   },
   {
     "name": "C4Helibomber",
+    "alias": "C4HeliBomber",
     "leagues": {
       "1700": "ferrari"
     },
@@ -267,6 +304,7 @@
   },
   {
     "name": "Tyresm0ke",
+    "alias": null,
     "leagues": {
       "2100": "force-india"
     },
@@ -274,6 +312,7 @@
   },
   {
     "name": "GeneralLustboy",
+    "alias": null,
     "leagues": {
       "1400": "mercedes"
     },
@@ -281,6 +320,7 @@
   },
   {
     "name": "Banaboy",
+    "alias": null,
     "leagues": {
       "2100": "toro-rosso2017"
     },
@@ -288,6 +328,7 @@
   },
   {
     "name": "Sanwitch",
+    "alias": "sanwitch",
     "leagues": {
       "1400": "mercedes"
     },
@@ -295,6 +336,7 @@
   },
   {
     "name": "DamagedJustice",
+    "alias": null,
     "leagues": {
       "1700": "renault"
     },
@@ -302,6 +344,7 @@
   },
   {
     "name": "AndiousAndy",
+    "alias": "andiousandy",
     "leagues": {
       "1400": "mclaren2017"
     },
@@ -309,6 +352,7 @@
   },
   {
     "name": "AssEffect3",
+    "alias": null,
     "leagues": {
       "2100": "rbr"
     },
@@ -316,6 +360,7 @@
   },
   {
     "name": "Xephyr",
+    "alias": "chrisdunnbirch",
     "leagues": {
       "2100": "williams"
     },
@@ -323,6 +368,7 @@
   },
   {
     "name": "nizmugen",
+    "alias": null,
     "leagues": {
       "1700": "sauber"
     },
@@ -330,6 +376,7 @@
   },
   {
     "name": "Weas95",
+    "alias": "weas95",
     "leagues": {
       "2100": "sauber"
     },
@@ -337,6 +384,7 @@
   },
   {
     "name": "Krusen",
+    "alias": null,
     "leagues": {
       "1700": "toro-rosso2017"
     },
@@ -344,6 +392,7 @@
   },
   {
     "name": "figgot",
+    "alias": "imminencyrs",
     "leagues": {
       "1700": "mercedes"
     },
