@@ -262,12 +262,9 @@ class TTBot:
                     round=schedule['round'],
                     race=schedule['race'],
                     date=schedule['date'],
-                    table_1400_driver=table_1400['driver'],
-                    table_1400_team=table_1400['team'],
-                    table_1700_driver=table_1700['driver'],
-                    table_1700_team=table_1700['team'],
-                    table_2100_driver=table_2100['driver'],
-                    table_2100_team=table_2100['team']
+                    table_1400=table_1400['standings'],
+                    table_1700=table_1700['standings'],
+                    table_2100=table_2100['standings'],
                 )
 
             utils.create_thread(subreddit, post_title, post_body)
@@ -305,8 +302,7 @@ class TTBot:
                             race=schedule['race'],
                             date=date.strftime('%B %d, %Y'),
                             results=details['results'],
-                            driver_standings=details['driver'],
-                            team_standings=details['team'],
+                            standings=details['standings'],
                             highlights=details['highlights']
                         )
 
@@ -318,20 +314,22 @@ class TTBot:
         engine = inflect.engine()
         highlights = {}
 
-        driver = self.google.standings(league, round_number)
-        team = self.google.standings(league, round_number, 'team_standings')
+        standings = {}
+        results = {}
 
-        results = self.google.results(league, round_number, 5)
-        for row in results:
+        standings['driver'] = self.google.standings(league, round_number)
+        standings['team'] = self.google.standings(league, round_number, 'team_standings')
+
+        results['driver'] = self.google.results(league, round_number, 5)
+        for row in results['driver']:
             row['points'] = utils.calculate_points(int(row['position']))
 
         content = {
-            'driver': utils.build_standings_table('driver', driver),
-            'team': utils.build_standings_table('team', team),
-            'results': utils.build_standings_table('driver', results)
+            'standings': utils.build_standings_table(standings),
+            'results': utils.build_standings_table(results)
         }
 
-        for entry in driver:
+        for entry in standings['driver']:
             last_position_count = entry['positions'][entry['last_position']]
             last_position = "{} {}".format(
                 engine.number_to_words(engine.ordinal(last_position_count)),

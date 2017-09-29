@@ -3,13 +3,10 @@
 ## Current standings
 
 ###1400
-{table_1400_driver}
-{table_1400_team}
+{table_1400}
 
 ###1700
-{table_1700_driver}
-{table_1700_team}
+{table_1700}
 
 ### 2100
-{table_2100_driver}
-{table_2100_team}
+{table_2100}

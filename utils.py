@@ -99,7 +99,7 @@ def calculate_points(position):
         8: 3,
         9: 2,
         10: 1
-        }.get(position, 0)
+    }.get(position, 0)
 
 
 def convert_time(lap):
@@ -113,23 +113,27 @@ def convert_time(lap):
     return round(secs, 3)
 
 
-def build_standings_table(mode, standings):
-    if mode == 'driver':
-        table = ' |Name|Team|Points|\n-|-|-|-\n'
-    else:
-        table = ' |Name|Points|\n-|-|-\n'
+def build_standings_table(standings):
+    table = ['Pos|Name|Team|Points', ':-:|-|-|:-:']
+    if 'team' in standings:
+        table[0] += '|||Pos|Name|Points'
+        table[1] += '|-|-|:-:|-|:-:'
 
-    for idx, row in enumerate(standings[:10]):
-        if mode == 'driver':
-            table = table + '{index}|{name}|{team}|{points}\n'.format(
-                index=idx + 1, name=row['name'], points=row['points'], team=row['team']
-            )
-        else:
-            table = table + '{index}|{name}|{points}\n'.format(
-                index=idx + 1, name=row['name'], points=row['points']
+    for idx, row in enumerate(standings['driver'][:10]):
+        table.append('{index}|{name}|{team}|{points}'.format(
+            index=idx + 1,
+            name=row['name'],
+            points=format_float(row['points']),
+            team=row['team']
+        ))
+        if 'team' in standings:
+            table[idx + 2] += '|||{index}|{name}|{points}'.format(
+                index=idx + 1,
+                name=standings['team'][idx]['name'],
+                points=format_float(standings['team'][idx]['points'])
             )
 
-    return table
+    return '\n'.join(table)
 
 
 def create_thread(subreddit, title, body):
@@ -138,4 +142,3 @@ def create_thread(subreddit, title, body):
         debug_log("New thread posted")
     except APIException:
         debug_log("API Exception raised, unable to create thread")
-

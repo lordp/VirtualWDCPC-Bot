@@ -6,8 +6,5 @@
 ##Highlights (randomly chosen)
 {highlights}
 
-##Driver standings (top 10)
-{driver_standings}
-
-##Team standings
-{team_standings}
+##Standings (top 10)
+{standings}
