@@ -142,3 +142,12 @@ def create_thread(subreddit, title, body):
         debug_log("New thread posted")
     except APIException:
         debug_log("API Exception raised, unable to create thread")
+
+
+def find_driver(name, drivers):
+    try:
+        driver = next(item for item in drivers if item["name"] == name)
+    except StopIteration:
+        driver = next(item for item in drivers if item["alias"] == name)
+
+    return driver

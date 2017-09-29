@@ -185,7 +185,7 @@ class TTBot:
                 time = utils.format_time(row['time'])
 
                 try:
-                    driver = next(item for item in self.drivers if item["name"] == row['name'])
+                    driver = utils.find_driver(row['name'], self.drivers)
                     league = ', '.join((driver['leagues']))
                 except StopIteration:
                     utils.debug_log("League not found for '{0}'".format(row['name']))
