@@ -180,7 +180,7 @@ def country_to_flag(country):
         'USA': 'us',
         'Singapore': 'singapore',
         'Luxembourg': 'lux',
-        'United Arab Emirates': 'UAE',
+        'Abu Dhabi': 'UAE',
         'Lithuania': 'lit',
         'Sweden': 'sweden',
         'Finland': 'finland',
