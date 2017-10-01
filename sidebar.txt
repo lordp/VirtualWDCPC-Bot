@@ -21,11 +21,7 @@ All skill levels are welcome. Please check out the links at the top to become mo
 	|		|
 |:--:		|:--		|
 |Date | Event|
-30 Sep |  [](/flag-malaysia "Malaysia")Malaysia|
-7 Oct |  [](/flag-japan "Japan")Japan|
-21 Oct |  [](/flag-us "USA")United States|
-28 Oct |  [](/flag-mexico "Mexico")Mexico|
-
+{schedule}
 
 #Past Season Results#
 
