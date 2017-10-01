@@ -1,4 +1,5 @@
 import praw
+import prawcore
 from praw.exceptions import APIException
 import csv
 from google import GoogleRequests
@@ -8,6 +9,7 @@ import utils
 import inflect
 import random
 import json
+import os
 from pprint import pprint
 
 # handler = logging.StreamHandler()
@@ -393,6 +395,24 @@ class TTBot:
             )
 
         self.client.subreddit(self.subreddit).mod.update(description=sidebar_body)
+
+    def update_banner(self):
+        next_race = self.schedule[sorted(filter(lambda x: int(x) >= 0, self.schedule))[0]]
+        filename = "banners/{race}.jpg".format(race=next_race['race'].lower())
+        if not os.path.exists(filename):
+            filename = "banners/{race}.png".format(race=next_race['race'].lower())
+
+        try:
+            ss = self.client.subreddit(self.subreddit).stylesheet
+            ss.upload('banner', filename)
+            stylesheet = self.client.subreddit(self.subreddit).stylesheet().stylesheet
+            ss.update(stylesheet)
+        except FileNotFoundError:
+            utils.debug_log('Banner file not found')
+        except APIException:
+            utils.debug_log('API exception thrown')
+        except prawcore.TooLarge:
+            utils.debug_log('Banner image is too large')
 
 
 # End of class, start program
