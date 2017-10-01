@@ -148,6 +148,8 @@ def find_driver(name, drivers):
     try:
         driver = next(item for item in drivers if item["name"].lower() == name.lower())
     except StopIteration:
+        # filter out all the drivers without an alias
+        drivers = filter(lambda x: x['alias'] is not None, drivers)
         driver = next(item for item in drivers if item["alias"].lower() == name.lower())
 
     return driver
