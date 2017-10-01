@@ -10,6 +10,7 @@ import inflect
 import random
 import json
 import os
+from itertools import filterfalse
 import logging
 
 # handler = logging.StreamHandler()
@@ -332,7 +333,10 @@ class TTBot:
             'results': utils.build_standings_table(results)
         }
 
-        for entry in standings['driver']:
+        # filter out the drivers that haven't participated at all
+        standings = filterfalse(lambda x: len(x['positions'].keys()) == 1 and list(x['positions'].keys())[0] == '-',
+                               standings['driver'])
+        for entry in standings:
             last_position_count = entry['positions'][entry['last_position']]
             last_position = "{} {}".format(
                 engine.number_to_words(engine.ordinal(last_position_count)),
