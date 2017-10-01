@@ -100,3 +100,6 @@ ENV/
 
 # pycharm files
 .idea/
+
+# PRAW config
+praw.ini
