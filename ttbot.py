@@ -88,7 +88,7 @@ class TTBot:
 
     def connect_to_reddit(self):
         utils.debug_log("Setting up connection with Reddit")
-        self.client = praw.Reddit('ttbot-test')
+        self.client = praw.Reddit('ttbot')
         self.subreddit = self.client.config.custom['subreddit']
         self.bot_name = self.client.config.custom['bot_name']
         utils.debug_log("Connected")
