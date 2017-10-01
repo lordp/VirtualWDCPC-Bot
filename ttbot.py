@@ -181,7 +181,7 @@ class TTBot:
             replytext += ("\n\n|Q|Driver|League|Time|Diff.|Rel. Diff.|Points\n"
                           "|:-:|-|:-:|-|-:|-:|:-:\n")
 
-            for row in table:
+            for row in sorted(table, key=lambda item: item['position']):
                 time = utils.format_time(row['time'])
 
                 try:
