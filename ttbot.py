@@ -10,7 +10,7 @@ import inflect
 import random
 import json
 import os
-from pprint import pprint
+import logging
 
 # handler = logging.StreamHandler()
 # handler.setLevel(logging.DEBUG)
@@ -51,7 +51,7 @@ class TTBot:
         # Number to retrieve when looking for time trial threads
         self.thread_count = 10
 
-        # logging.basicConfig(filename='ttbot.log', level=logging.INFO)
+        logging.basicConfig(filename='ttbot.log', level=logging.INFO)
 
         utils.debug_log("Bot initialized")
 
@@ -307,6 +307,9 @@ class TTBot:
                         )
 
                     utils.create_thread(subreddit, post_title, post_body)
+
+                    self.update_sidebar()
+                    self.update_banner()
             else:
                 utils.debug_log("Results not yet posted for {league}".format(league=league))
 
