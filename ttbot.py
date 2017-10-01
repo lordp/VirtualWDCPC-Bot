@@ -351,7 +351,8 @@ class TTBot:
         return content
 
     def update_sidebar(self):
-        template = "{league} | [](/mini-flair-{team} \"\")[](/flag-{country} \"\") {driver} | {points} |"
+        position_template = "{league} | [](/mini-flair-{team} \"\")[](/flag-{country} \"\") {driver} | {points} |"
+        schedule_template = "{date} | [](/flag-{flag} \"{country}\") {country} |"
 
         leaders = self.google.get_leaders()
         leader_text = {}
@@ -359,23 +360,36 @@ class TTBot:
             try:
                 driver_name = leaders[league]['driver'][0]
                 driver_points = leaders[league]['driver'][1]
-                driver = next((item for item in self.drivers if item["name"] == driver_name), False)
+                driver = utils.find_driver(driver_name, self.drivers)
 
-                leader_text[league] = template.format(
+                leader_text[league] = position_template.format(
                     league=league,
                     team=driver['leagues'][league],
                     country=driver['country'],
                     driver=driver_name,
                     points=utils.format_float(driver_points)
                 )
-            except TypeError:
+            except StopIteration:
+                utils.debug_log("Driver not found")
                 leader_text[league] = ''
+
+        filtered = sorted(filter(lambda x: int(x) >= 0, bot.schedule))[:4]
+        next_races = []
+        for race in filtered:
+            flag = utils.country_to_flag(bot.schedule[race]['race'])
+            date = datetime.strptime(bot.schedule[race]['date'], '%Y-%m-%d')
+            next_races.append(schedule_template.format(
+                date=date.strftime('%d %b'),
+                flag=flag,
+                country=bot.schedule[race]['race']
+            ))
 
         with open('sidebar.txt') as f:
             sidebar_body = f.read().format(
                 league_1400=leader_text['1400'],
                 league_1700=leader_text['1700'],
                 league_2100=leader_text['2100'],
+                schedule='\n'.join(next_races),
             )
 
         self.client.subreddit(self.subreddit).mod.update(description=sidebar_body)
