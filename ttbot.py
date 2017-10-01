@@ -32,6 +32,7 @@ class TTBot:
 
         self.schedule = {}
         self.load_schedule()
+        self.load_drivers()
 
         self.positions = {
             '1': 'win', '2': '2nd place', '3': '3rd place', '4': '4th place', '5': '5th place', '6': '6th place',
@@ -107,9 +108,6 @@ class TTBot:
         return threads
 
     def process_time_trial_threads(self, threads):
-        # Load the drivers from the league text files into array
-        self.load_drivers()
-
         for thread in threads:
             # Wet and dry times tables need building
             times = []
