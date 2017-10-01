@@ -373,15 +373,15 @@ class TTBot:
                 utils.debug_log("Driver not found")
                 leader_text[league] = ''
 
-        filtered = sorted(filter(lambda x: int(x) >= 0, bot.schedule))[:4]
+        filtered = sorted(filter(lambda x: int(x) >= 0, self.schedule))[:4]
         next_races = []
         for race in filtered:
-            flag = utils.country_to_flag(bot.schedule[race]['race'])
-            date = datetime.strptime(bot.schedule[race]['date'], '%Y-%m-%d')
+            flag = utils.country_to_flag(self.schedule[race]['race'])
+            date = datetime.strptime(self.schedule[race]['date'], '%Y-%m-%d')
             next_races.append(schedule_template.format(
                 date=date.strftime('%d %b'),
                 flag=flag,
-                country=bot.schedule[race]['race']
+                country=self.schedule[race]['race']
             ))
 
         with open('sidebar.txt') as f:
