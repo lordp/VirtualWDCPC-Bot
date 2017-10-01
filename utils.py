@@ -146,8 +146,8 @@ def create_thread(subreddit, title, body):
 
 def find_driver(name, drivers):
     try:
-        driver = next(item for item in drivers if item["name"] == name)
+        driver = next(item for item in drivers if item["name"].lower() == name.lower())
     except StopIteration:
-        driver = next(item for item in drivers if item["alias"] == name)
+        driver = next(item for item in drivers if item["alias"].lower() == name.lower())
 
     return driver
