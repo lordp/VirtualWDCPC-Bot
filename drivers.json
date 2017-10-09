@@ -298,7 +298,8 @@
     "name": "C4Helibomber",
     "alias": "C4HeliBomber",
     "leagues": {
-      "1700": "ferrari"
+      "1700": "ferrari",
+      "2100": "toro-rosso2017"
     },
     "country": "germany"
   },
