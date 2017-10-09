@@ -263,7 +263,7 @@ class GoogleRequests:
                     'name': row[1],
                     'team': row[0],
                     'points': float(points),
-                    'positions': Counter(row[3:-3]),
+                    'positions': Counter(row[3:(3 + round_number)]),
                     'last_position': row[2 + round_number]
                 })
             else:
