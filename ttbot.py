@@ -254,9 +254,9 @@ class TTBot:
         if prcount == 0:
             utils.debug_log("{race} pre-race thread needed".format(race=schedule['race']))
 
-            table_1400 = self.post_race_details('1400', schedule['round'])
-            table_1700 = self.post_race_details('1700', schedule['round'])
-            table_2100 = self.post_race_details('2100', schedule['round'])
+            table_1400 = self.post_race_details('1400', int(schedule['round']))
+            table_1700 = self.post_race_details('1700', int(schedule['round']))
+            table_2100 = self.post_race_details('2100', int(schedule['round']))
 
             with open('pre-race-body.txt') as f:
                 post_body = f.read().format(
