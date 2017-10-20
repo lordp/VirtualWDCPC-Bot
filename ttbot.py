@@ -113,10 +113,11 @@ class TTBot:
     def process_time_trial_threads(self, threads):
         for thread in threads:
             # Wet and dry times tables need building
+            old_times = utils.load_times(thread.title)
             times = []
 
             # Check if TTBot has replied with a table already, in which case it needs editing.
-            already_replied = 0
+            already_replied = None
 
             # pattern = re.compile("^.*[^~{2}]\[((\d+)[{1}:|.](\d+)[{2}:|.](\d+))\].*?\((.*?)\).*$", re.IGNORECASE)
             pattern = re.compile(r"\[([\d:\.]+)\]\([^\)]*\)")
@@ -154,24 +155,25 @@ class TTBot:
             # Build the tables based on the dry and wet arrays
             if len(times) > 0:
                 replytext += self.build_table(times)
+                utils.save_times(thread.title, times)
 
             footer = "\n[Feedback | Bugs](http://www.reddit.com/message/compose/?to={})".format(self.bot_name)
 
             # Submit reply.
             try:
-                if already_replied != 0:
-                    utils.debug_log("Already replied... editing")
-                    already_replied.edit(replytext + footer)
-                    already_replied.mod.distinguish('yes', sticky=True)
-                    utils.debug_log("Edited post")
-                else:
-                    if len(times) > 0:
+                if old_times != times:
+                    if already_replied is not None:
+                        utils.debug_log("Already replied... editing")
+                        already_replied.edit(replytext + footer)
+                        already_replied.mod.distinguish('yes', sticky=True)
+                        utils.debug_log("Edited post")
+                    else:
                         utils.debug_log("Adding new reply")
                         comment = thread.reply(replytext + footer)
                         comment.mod.distinguish('yes', sticky=True)
                         utils.debug_log("Added new reply")
-                    else:
-                        utils.debug_log("No replies, so no table posted")
+                else:
+                    utils.debug_log("Times haven't changed, not posting")
             except APIException:
                 utils.debug_log("API Exception raised, unable to post to thread")
 
@@ -335,7 +337,7 @@ class TTBot:
 
         # filter out the drivers that haven't participated at all
         standings = filterfalse(lambda x: len(x['positions'].keys()) == 1 and list(x['positions'].keys())[0] == '-',
-                               standings['driver'])
+                                standings['driver'])
         for entry in standings:
             last_position_count = entry['positions'][entry['last_position']]
             last_position = "{} {}".format(

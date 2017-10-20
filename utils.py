@@ -1,6 +1,7 @@
 from datetime import datetime
 import logging
 import re
+import json
 from praw.exceptions import APIException
 
 
@@ -200,3 +201,53 @@ def country_to_flag(country):
         'Azerbaijan': 'azerbaijan',
         'Mexico': 'mexico',
     }.get(country, None)
+
+
+def save_times(title, times):
+    round_number = re.sub(r'[^0-9]', '', title)
+    try:
+        with open('tt-leaderboard.json', 'r') as infile:
+            leaderboard = json.load(infile)
+    except FileNotFoundError:
+        leaderboard = {
+            "total": {}
+        }
+
+    leaderboard[round_number] = times
+    leaderboard['total'] = generate_leaderboard(leaderboard)
+
+    with open('tt-leaderboard.json', 'w') as outfile:
+        json.dump(leaderboard, outfile)
+
+
+def load_times(title):
+    round_number = re.sub(r'[^0-9]', '', title)
+    try:
+        with open('tt-leaderboard.json', 'r') as infile:
+            leaderboard = json.load(infile)
+    except FileNotFoundError:
+        leaderboard = {
+            "total": {}
+        }
+
+    if round_number in leaderboard:
+        times = leaderboard[round_number]
+    else:
+        times = []
+
+    return times
+
+
+def generate_leaderboard(leaderboard):
+    total = {}
+    for round_number in leaderboard:
+        if round_number == 'total':
+            continue
+
+        for driver in leaderboard[round_number]:
+            if driver['name'] not in total:
+                total[driver['name']] = 0
+
+            total[driver['name']] += calculate_points(driver['position'])
+
+    return total
