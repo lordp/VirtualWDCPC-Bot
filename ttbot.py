@@ -404,6 +404,7 @@ class TTBot:
             )
 
         self.client.subreddit(self.subreddit).mod.update(description=sidebar_body)
+        utils.debug_log('Sidebar updated')
 
     def update_banner(self):
         next_race = self.schedule[sorted(filter(lambda x: int(x) >= 0, self.schedule))[0]]
@@ -416,6 +417,7 @@ class TTBot:
             ss.upload('banner', filename)
             stylesheet = self.client.subreddit(self.subreddit).stylesheet().stylesheet
             ss.update(stylesheet)
+            utils.debug_log('Banner updated')
         except FileNotFoundError:
             utils.debug_log('Banner file not found')
         except APIException:
