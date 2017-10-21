@@ -82,9 +82,9 @@ class TTBot:
 
         if DAYS_BEFORE_TIME_TRIAL in self.schedule:
             self.create_time_trial_thread()
-        elif DAYS_BEFORE_PRE_RACE in self.schedule:
+        if DAYS_BEFORE_PRE_RACE in self.schedule:
             self.create_pre_race_thread()
-        elif DAYS_BEFORE_POST_RACE in self.schedule:
+        if DAYS_BEFORE_POST_RACE in self.schedule:
             self.create_post_race_thread()
 
     def connect_to_reddit(self):
