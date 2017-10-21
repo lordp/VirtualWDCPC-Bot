@@ -240,7 +240,7 @@ class TTBot:
 
             utils.create_thread(subreddit, post_title, post_body)
         else:
-            utils.debug_log("TT thread already made")
+            utils.debug_log("TT thread already made for {race}".format(race=schedule['race']))
 
     def create_pre_race_thread(self):
         schedule = self.schedule[DAYS_BEFORE_PRE_RACE]
