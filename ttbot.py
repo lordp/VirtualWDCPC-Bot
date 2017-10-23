@@ -326,7 +326,7 @@ class TTBot:
         standings['driver'] = self.google.standings(league, round_number)
         standings['team'] = self.google.standings(league, round_number, 'team_standings')
 
-        results['driver'] = self.google.results(league, round_number, 5)
+        results['driver'] = self.google.results(league, round_number, 10)
         for row in results['driver']:
             row['points'] = utils.calculate_points(int(row['position']))
 
