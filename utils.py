@@ -120,7 +120,8 @@ def build_standings_table(standings):
         table[0] += '|||Pos|Name|Points'
         table[1] += '|-|-|:-:|-|:-:'
 
-    for idx, row in enumerate(standings['driver'][:10]):
+    top_ten = sorted(standings['driver'][:10], key=lambda item: float(item['points']), reverse=True)
+    for idx, row in enumerate(top_ten):
         table.append('{index}|{name}|{team}|{points}'.format(
             index=idx + 1,
             name=row['name'],
