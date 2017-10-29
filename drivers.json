@@ -128,7 +128,8 @@
     "alias": "BestPepeEU",
     "leagues": {
       "1400": "ferrari",
-      "1700": "toro-rosso2017"
+      "1700": "toro-rosso2017",
+      "2100": "williams"
     },
     "country": "germany"
   },
