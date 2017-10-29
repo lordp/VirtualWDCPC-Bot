@@ -368,9 +368,9 @@ class TTBot:
         leaders = self.google.get_leaders()
         leader_text = {}
         for league in leaders:
+            driver_name = leaders[league]['driver'][0]
+            driver_points = leaders[league]['driver'][1]
             try:
-                driver_name = leaders[league]['driver'][0]
-                driver_points = leaders[league]['driver'][1]
                 driver = utils.find_driver(driver_name, self.drivers)
 
                 leader_text[league] = position_template.format(
@@ -380,8 +380,8 @@ class TTBot:
                     driver=driver_name,
                     points=utils.format_float(driver_points)
                 )
-            except StopIteration:
-                utils.debug_log("Driver not found")
+            except (StopIteration, KeyError):
+                utils.debug_log("Driver not found '{}'".format(driver_name))
                 leader_text[league] = ''
 
         filtered = sorted(filter(lambda x: int(x) >= 0, self.schedule))[:4]
