@@ -384,7 +384,7 @@ class TTBot:
                 utils.debug_log("Driver not found '{}'".format(driver_name))
                 leader_text[league] = ''
 
-        filtered = sorted(filter(lambda x: int(x) >= 0, self.schedule))[:4]
+        filtered = sorted(filter(lambda x: int(x) >= 1, self.schedule))[:4]
         next_races = []
         for race in filtered:
             flag = utils.country_to_flag(self.schedule[race]['race'])

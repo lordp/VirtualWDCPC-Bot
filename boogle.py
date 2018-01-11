@@ -8,14 +8,14 @@ from oauth2client import tools
 from oauth2client.file import Storage
 
 from datetime import datetime, timedelta
-from utils import ordinal
+from utils import ordinal, calculate_points
 
 from collections import Counter
 from pprint import pprint
 
 try:
     import argparse
-    flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
+    # flags = argparse.ArgumentParser(parents=[tools.argparser]).parse_args()
 except ImportError:
     flags = None
 
@@ -92,7 +92,7 @@ class GoogleRequests:
         return credentials
 
     def get_spreadsheet_range(self, league, mode='driver'):
-        cache_key = 'leaders_{0}_{1}'.format(league, mode)
+        cache_key = 'cache_{0}_{1}'.format(league, mode)
         range_name = '{0} Standings!{1}'.format(league, self.sheets_ranges[mode])
 
         if self.cache is None or cache_key not in self.cache:
@@ -274,6 +274,30 @@ class GoogleRequests:
 
         return sorted(results, key=lambda e: e['points'], reverse=True)
 
+    def leaderboard(self, league, round_number):
+        leaderboard = {}
+        standings = self.get_spreadsheet_range(league, 'results')
+        for row in standings:
+            name = row[1]
+            leaderboard[name] = []
+
+            this_round = {
+                "points": [],
+                "position": []
+            }
+            for tmp_round in row[3:round_number + 3]:
+                try:
+                    this_round['points'].append(calculate_points(int(tmp_round)))
+                except ValueError:
+                    this_round['points'].append(0)
+
+            leaderboard[name].append(this_round)
+
+        for r in range(round_number):
+            print(r)
+
+        # pprint(leaderboard)
+
 
 if __name__ == '__main__':
     from cachetools import TTLCache
@@ -290,5 +314,5 @@ if __name__ == '__main__':
 
     # req.get_spreadsheet_data()
     # print(req.standings('2100', 'driver_standings'))
-    # pprint(req.standings('1400', 12, 'driver_standings'))
-    # pprint(req.results('1400', 1))
+    # pprint(req.standings('1400', 5, 'driver_standings'))
+    req.leaderboard('1700', 5)
